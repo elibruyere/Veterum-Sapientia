@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="la">
 <head>
-  <link rel="icon" href="favicon-32x32.png" type="image/png">
+      <link rel="icon" href="favicon-32x32.png" type="image/png">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Veterum Sapientia — Analyse</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      margin: 20px;
+      font-family: serif;
       line-height: 1.6;
+      padding: 2em;
+      background: #f8f9fa;
     }
-    .nominatif { background-color: yellow; }
-    .accusatif { background-color: lightgreen; }
-    .genitif { background-color: lightblue; }
-    .datif { background-color: lightsalmon; }
-    .ablatif { background-color: lightcoral; }
-    #info-bulle {
+    .word {
+      cursor: pointer;
+      padding: 0 2px;
+      border-radius: 4px;
+    }
+    .nominative { background-color: #fff59d; }
+    .accusative { background-color: #a5d6a7; }
+    .genitive { background-color: #90caf9; }
+    .dative { background-color: #ffcc80; }
+    .ablative { background-color: #ef9a9a; }
+    .vocative { background-color: #ce93d8; }
+    .verb { color: black; font-style: italic; }
+
+    #info-box {
       position: fixed;
       bottom: 0;
       left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.8);
+      width: 100%;
+      background: #333;
       color: white;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
+      padding: 1em;
+      font-size: 0.9em;
       display: none;
-    }
-    span:hover {
-      cursor: pointer;
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
+
 <h1>Veterum Sapientia</h1>
 <h2>Analyse</h2>
 <p>
-<span class="cum" data-fonction="ablatif" data-traduction="cum+ cubjonctif : puisque">Cum</span> 
-<span class="adverbef" data-fonction="adjectif du sujet" data-traduction="Adverbe. finalement, enfin, bref, en somme">denique</span> 
+<span class="word adverb" data-info="cum+ subjonctif : puisque">Cum</span> 
+<span class="word adverb" data-info="Adverbe. finalement, enfin, bref, en somme">denique</span> 
 <span class="adjectif nominatif" data-fonction="nominatif sujet" data-traduction="catholique">catholica</span> 
 <span class="nominatif" data-fonction="nominatif sujet" data-traduction="Église">Ecclesia</span>, 
 <span class="adverbe" data-fonction="" data-traduction="adverbe - en tant que">utpote</span> 
