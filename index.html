@@ -122,22 +122,23 @@
     <li><a href="https://elibruyere.github.io/analyses-canoniques/">Retour à la page d'accueil</a></li>    
   </ul>
   
-<div id="info-bulle"></div>
+<div id="info-box"></div>
+  
 
 <script>
-  const spans = document.querySelectorAll('span');
-  const infoBulle = document.getElementById('info-bulle');
+  const words = document.querySelectorAll('.word');
+  const infoBox = document.getElementById('info-box');
 
-  spans.forEach(span => {
-    span.addEventListener('click', () => {
-      infoBulle.innerText = span.getAttribute('data-fonction') + " : " + span.getAttribute('data-traduction');
-      infoBulle.style.display = 'block';
+  words.forEach(word => {
+    word.addEventListener('click', () => {
+      infoBox.textContent = word.dataset.info;
+      infoBox.style.display = 'block';
     });
   });
 
   document.addEventListener('click', (e) => {
-    if (!e.target.matches('span')) {
-      infoBulle.style.display = 'none';
+    if (!e.target.classList.contains('word')) {
+      infoBox.style.display = 'none';
     }
   });
 </script>
